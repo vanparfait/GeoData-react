@@ -15,7 +15,7 @@ function App() {
 
       datas.sort((a, b) => {
         if (a.name.common < b.name.common) return -1;
-        else if (a.name.common > b.name.common) return -1;
+        else if (a.name.common > b.name.common) return 1;
         else return 0;
       });
 
