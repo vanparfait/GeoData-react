@@ -1,6 +1,8 @@
 import React from "react";
 
 const ModalContent = ({ country, closeModal }) => {
+  console.log(Object.entries(country.languages));
+
   return (
     <div
       onClick={closeModal}
@@ -16,7 +18,13 @@ const ModalContent = ({ country, closeModal }) => {
         >
           X
         </button>
-        <h1>modal</h1>
+        <h1 className="text-2xl mb-4">
+          here is {country.name.common}'s information
+        </h1>
+        <p className="text-lg mb-2">
+          <span className="font-semibold">Language(s)</span> :{" "}
+          {Object.entries(country.languages).join("  ")}
+        </p>
       </div>
     </div>
   );
