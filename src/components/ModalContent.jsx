@@ -22,7 +22,7 @@ const ModalContent = ({ country, closeModal }) => {
           here is {country.name.common}'s information
         </h1>
         <p className="text-lg mb-2">
-          <span className="font-semibold">Language(s)</span> :{" "}
+          <span className="font-semibold">Language(s)</span> :
           {Object.entries(country.languages).join("  ")}
         </p>
       </div>
