@@ -1,7 +1,7 @@
 import React from "react";
 
 const ModalContent = ({ country, closeModal }) => {
-  console.log(Object.entries(country.languages));
+  //console.log(Object.entries(country.languages));
 
   return (
     <div
@@ -24,6 +24,14 @@ const ModalContent = ({ country, closeModal }) => {
         <p className="text-lg mb-2">
           <span className="font-semibold">Language(s)</span> :
           {Object.entries(country.languages).join("  ")}
+        </p>
+        <p className="text-lg mb-2">
+          <span className="font-semibold">Capitales(s) </span> :
+          {country.capital[0]}
+        </p>
+        <p className="text-lg mb-2">
+          <span className="font-semibold">Population </span> :
+          {country.population}
         </p>
       </div>
     </div>
